@@ -9,7 +9,6 @@ public class Postcat : MonoBehaviour {
 	public float maxSpeed = 10.0f;
 	public float consumption = 0.1f;
 	public float fuel = 100.0f;
-	public float jumpForce = 10.0f;
 
 	public float yBound = 8.0f;
 	public float reboundForce = 1.0f;
@@ -62,57 +61,7 @@ public class Postcat : MonoBehaviour {
 		} else
 			gameController.GameOver();
 
-        // Звук двигателя
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            FindObjectOfType<AudioManager>().Play("engine");
-
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            FindObjectOfType<AudioManager>().Stop("engine");
-        }
-    }
+	}
 
 
 	public void ApplyDamage(float damage) {
@@ -121,18 +70,24 @@ public class Postcat : MonoBehaviour {
 
 
 	public void Refuel(float fuelAmount) {
-		fuel += fuelAmount;        
+		fuel += fuelAmount;
+        // Play sound
+        FindObjectOfType<AudioManager>().Play("refuel");
 	}
 
 
 	public void Jump() {
-		rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+		rb.AddForce(Vector3.up * 5.0f, ForceMode2D.Impulse);
 		animator.SetTrigger("Jump");
+        // Play sound
+        FindObjectOfType<AudioManager>().Play("jump");
     }
 
 
 	public void Crash() {
 		rb.AddForce(Vector3.left * 5.0f, ForceMode2D.Impulse);
 		animator.SetTrigger("Crash");
+		// TODO: Play sound - грустный кот
+
 	}
 }
