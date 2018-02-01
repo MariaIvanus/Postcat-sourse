@@ -214,17 +214,17 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1762616807}
+      objectReference: {fileID: 0}
     - target: {fileID: 114313254190193526, guid: cc1f73f7e38484523afcb96e7b613e5e,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-       objectReference: {fileID: 1762616807}
+      objectReference: {fileID: 0}
     - target: {fileID: 114120239732827144, guid: cc1f73f7e38484523afcb96e7b613e5e,
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
-      objectReference: {fileID: 1762616807}
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 224335726492356204, guid: cc1f73f7e38484523afcb96e7b613e5e,
         type: 2}
       propertyPath: m_AnchorMax.x
@@ -442,22 +442,6 @@ MonoBehaviour:
 --- !u!1 &1540576590 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1702276916737428, guid: cc1f73f7e38484523afcb96e7b613e5e,
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1762616806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e526d63fec3248a3963be00e55b0851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  postcatObj: {fileID: 0}
-  gameState: {fileID: 11400000, guid: 0430cb7f1e5d54e01ba6d0c2b01a75c4, type: 2}
-  postcatPrefab: {fileID: 4942441952498030, guid: 2b47f858cea9b44a39ee0bf25cf2caa6,
-    type: 2}
-  postcatPrefabWithCargo: {fileID: 4872919168094614, guid: fdc0d7da78e434191af2b03ca900e68d,
-
     type: 2}
   m_PrefabInternal: {fileID: 173909613}
 --- !u!1001 &2021144451
