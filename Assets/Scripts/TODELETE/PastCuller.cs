@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PastCuller : MonoBehaviour {
 
-	void OnTriggerExit2D(Collider2D col) {
+	/*void OnTriggerExit2D(Collider2D col) {
 		GameObject obj = col.gameObject;
 
 		// Scene cleanup with delay;
@@ -17,6 +17,6 @@ public class PastCuller : MonoBehaviour {
 
 
 	void CleanupCheckpoint() {
-		SceneManager.UnloadSceneAsync("Checkpoint");
-	}
+		//SceneManager.UnloadSceneAsync("Checkpoint");
+	}*/
 }

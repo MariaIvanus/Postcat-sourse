@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Postcat : MonoBehaviour {
 
-	public float speedScale = 10.0f;
+	public float speedScale = 400.0f;
 	public float maxSpeed = 10.0f;
 	public float consumption = 0.1f;
 	public float fuel = 100.0f;
@@ -57,11 +57,13 @@ public class Postcat : MonoBehaviour {
 
 			rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 			
+            
 			if (movement.magnitude > 0)
 				fuel -= consumption;
-		} else
-			gameController.GameOver();
-
+		}
+        // TODO: Uncomment when fixed
+        //else
+        //   gameController.GameOver();
         // Звук двигателя
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -112,10 +114,11 @@ public class Postcat : MonoBehaviour {
         {
             FindObjectOfType<AudioManager>().Stop("engine");
         }
+
     }
 
 
-	public void ApplyDamage(float damage) {
+    public void ApplyDamage(float damage) {
 		fuel -= damage;
 	}
 
