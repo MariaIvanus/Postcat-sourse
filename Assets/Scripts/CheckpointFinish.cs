@@ -6,7 +6,7 @@ using UnityEngine;
 // Process score submission;
 public class CheckpointFinish : MonoBehaviour {
 
-	/*GameController gameController;
+	GameController gameController;
 
 	void Awake() {
 		gameController = GameObject
@@ -42,5 +42,5 @@ public class CheckpointFinish : MonoBehaviour {
 		} else if (obj.CompareTag("Cargo") || obj.CompareTag("Rope"))
 			Destroy(obj);
 		
-	}*/
+	}
 }
