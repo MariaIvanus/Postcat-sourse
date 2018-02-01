@@ -25,8 +25,6 @@ public class GasTank : MonoBehaviour {
 			postcat.Refuel(fuel);
 
 			animator.SetTrigger("Take");
-
-			FindObjectOfType<AudioManager>().Play("refuel");
 			
 		}
 
